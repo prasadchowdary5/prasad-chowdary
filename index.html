@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast</title>
+
+    <meta name="title" content="Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast">
+    <meta name="description" content="Prasad Chowdary - Passionate Frontend Developer and Cybersecurity Enthusiast creating secure and responsive web applications. Explore my portfolio and projects.">
+    <meta name="keywords" content="Prasad Chowdary, Web Developer, Frontend Developer, Cybersecurity, Portfolio, Projects">
+    <meta name="author" content="Prasad Chowdary">
+
+    <!-- Open Graph Meta Tags / Facebook -->
+    <meta property="og:title" content="Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast">
+    <meta property="og:description" content="Passionate about creating secure and responsive web applications. Explore my portfolio and projects.">
+    <meta property="og:image" content="assets/images/banner.webp">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast">
+    <meta name="twitter:description" content="Passionate about creating secure and responsive web applications. Explore my portfolio and projects.">
+    <meta name="twitter:image" content="assets/images/banner.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" type="image/svg+xml">
+
+    <!-- Google Fonts: Rubik -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+
+        [data-bs-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #e9ecef;
+            --card-bg: #1e1e1e;
+            --border-color: #333;
+        }
+
+        [data-bs-theme="light"] {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --card-bg: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo-name {
+            color: var(--text-color);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+            margin: 0 0.5rem;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        #hero {
+            padding: 8rem 0 5rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-portrait {
+            text-align: center;
+        }
+
+        .hero-portrait .pic {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #6f42c1);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        .hero-content .name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .btn-showcase {
+            background: linear-gradient(135deg, var(--primary-color), #6f42c1);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-decoration-color: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .primary-bg-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        .secondary-bg-btn {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        .primary-bg-btn:hover, .secondary-bg-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .theme-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+        }
+
+        .section-heading {
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .muted-text {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #6f42c1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .card-text {
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .about-portrait img {
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .bio {
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .skill, .tool {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .skill:hover, .tool:hover {
+            background-color: var(--card-bg);
+            transform: translateY(-3px);
+        }
+
+        .skill-image, .tool-image {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name, .tool-name {
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .project-card {
+            overflow: hidden;
+        }
+
+        .project-card .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .project-card .title {
+            font-weight: 600;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .project-card .title:hover {
+            color: var(--primary-color);
+        }
+
+        .project-card .stacks {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .project-card .description-container {
+            padding: 0 1.25rem;
+        }
+
+        .project-card .description {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-card .banner-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card .banner {
+            height: 180px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .project-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .project-card:hover .banner {
+            transform: scale(1.05);
+        }
+
+        .in-progress {
+            background-color: #ffc107;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+        }
+
+        .cursor-not-allowed {
+            cursor: not-allowed;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            margin: 1rem;
+        }
+
+        .testimonial .description {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .testimonial .pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--primary-color);
+        }
+
+        .testimonial .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial .name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial .role {
+            color: var(--secondary-color);
+        }
+
+        .article-card {
+            overflow: hidden;
+        }
+
+        .article-card .banner-container {
+            position: relative;
+        }
+
+        .article-card .banner {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-card .badge {
+            background-color: var(--primary-color);
+            color: white;
+            margin: 1rem;
+        }
+
+        .article-card .card-title {
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .article-card .card-title a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .article-card .card-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .article-card .description {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .contact-form .form-control {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+        }
+
+        .contact-form .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            border-color: var(--primary-color);
+        }
+
+        footer {
+            padding: 3rem 0;
+            background-color: var(--card-bg);
+            text-align: center;
+        }
+
+        .copyright-text span {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .heart-icon {
+            color: #e25555;
+        }
+
+        #backToTopButton {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #preloader:after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--border-color);
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content .name {
+                font-size: 2.5rem;
+            }
+            
+            .hero-portrait .pic {
+                width: 200px;
+                height: 200px;
+                font-size: 3rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    
+    <!-- Header -->
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-expand-md fixed-top">
+            <div class="container">
+                <a href="/" class="navbar-brand logo">
+                    <span><</span>
+                    <span class="logo-name">Prasad Chowdary</span>
+                    <span>/></span>
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarMenu">
+                    <div class="offcanvas-header">
+                        <a href="/" class="offcanvas-title navbar-brand logo" id="offcanvasNavbarMenu">
+                            <span><</span>
+                            <span class="logo-name">Prasad Chowdary</span>
+                            <span>/></span>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close Navigation Menu"><i class="bi bi-x toggle-icon"></i></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-underline justify-content-end flex-grow-1">
+                            <li class="nav-item" data-bs-dismiss="offcanvas"><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
+                            <li class="nav-item" data-bs-dismiss="offcanvas"><a href="#about" class="nav-link">About</a></li>
+                            <li class="nav-item" data-bs-dismiss="offcanvas" ><a href="#skills" class="nav-link">Skills</a></li>
+                            <li class="nav-item" data-bs-dismiss="offcanvas"><a href="#projects" class="nav-link">Projects</a></li>
+                            <li class="nav-item" data-bs-dismiss="offcanvas"><a href="#experience" class="nav-link">Experience</a></li>
+                            <li class="nav-item" data-bs-dismiss="offcanvas"><a href="#contact" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn border-0" id="switchTheme"><i class="bi bi-brightness-high-fill"></i></button>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle Navigation Menu"><i class="bi bi-list toggle-icon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="container">     
+            <div class="row about-content">
+                <div class="col-lg-5 order-lg-2">
+                    <div class="hero-portrait">
+                        <div class="pic">👨‍💻</div>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-lg-1 hero-content">
+                    <span class="h3">Namasté, I'm</span>
+                    <h1 class="name">Prasad Chowdary</h1>
+                    <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase"><i class="bi bi-stars"></i> Frontend Developer & Cybersecurity Enthusiast</button>
+                    <p class="tagline mb-3">Results-driven Frontend Developer and Cybersecurity Enthusiast with hands-on experience in web development and penetration testing. Passionate about creating <span class="underline">secure</span> and <span class="underline">responsive</span> web applications that provide excellent user experiences.</p>
+                    <div class="social-icons pb-2 pt-2 mb-2">
+                        <a href="https://github.com/prasadchowdary5" target="_blank" class="github"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/prasad-chowdary-3a0813236/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:pchowdary205@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                    <div class="d-flex call-to-action">
+                        <a href="#contact"><button type="button" class="btn me-4 primary-bg-btn"><i class="bi bi-envelope"></i> Contact Me</button></a>
+                        <a href="#projects"><button type="button" class="btn btn-light secondary-bg-btn">View Portfolio <i class="bi bi-arrow-up-right-circle"></i></button></a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Things I Love -->
+    <section id="things-i-love">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Interests</span></h6>
+            <h2 class="section-heading text-center">Things I Love</h2>
+            <div class="row justify-content-center pt-3 gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="circle-container">
+                            <div class="circle"><i class="bi bi-code-slash"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Developing</p>
+                            <p class="card-text">I enjoy turning ideas into reality through code. Whether it's a responsive website or a secure web application, I love the process of building digital solutions that solve real-world problems.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="circle-container">
+                            <div class="circle"><i class="bi bi-shield-check"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Cybersecurity</p>
+                            <p class="card-text">I'm passionate about protecting digital assets and ensuring application security. From penetration testing to vulnerability assessment, I enjoy exploring ways to make the web a safer place.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="circle-container">
+                            <div class="circle"><i class="bi bi-pencil-square"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Learning & Sharing</p>
+                            <p class="card-text">I believe in continuous learning and sharing knowledge. I enjoy writing blogs to help others understand complex concepts in web development and security, making technology more accessible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">But who am I?</span></h6>
+            <h2 class="section-heading text-center">About Me</h2>
+            <p class="text-center muted-text mt-3 mb-4">My story in a nutshell ;)</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 about-portrait">
+                    <div class="pic" style="background: linear-gradient(135deg, #0d6efd, #6f42c1); height: 400px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: white;">👨‍🎓</div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="bio">
+                        Hey there, I'm Prasad Chowdary, a passionate Frontend Developer and Cybersecurity Enthusiast from Rajahmundry, Andhra Pradesh. I'm currently pursuing my B.Tech in Computer Science and Engineering with a specialization in Cybersecurity.
+                        </br></br>
+                        My journey in technology began with curiosity about how websites work, which led me to explore web development. I quickly realized the importance of security in web applications, which sparked my interest in cybersecurity. Now, I'm focused on creating web applications that are not only visually appealing but also secure by design.
+                        </br></br>
+                        When I'm not coding or learning about new security practices, you can find me working on video editing projects, writing technical blogs, or exploring new technologies. I believe in continuous learning and enjoy sharing my knowledge with others in the tech community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What do I know?</span></h6>
+            <h2 class="section-heading text-center">Skills</h2>
+            <p class="text-center muted-text mt-3 mb-4">Here are some of the technologies that are part of my current stack:</p>
+            <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-6 mt-4 gy-4 skills-container">
+                <div class="col">
+                    <div class="skill">
+                        <div class="skill-image" style="background: #E34F26; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">HTML</div>
+                        <p class="skill-name">HTML</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill">
+                        <div class="skill-image" style="background: #1572B6; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">CSS</div>
+                        <p class="skill-name">CSS</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill">
+                        <div class="skill-image" style="background: #F7DF1E; color: black; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">JS</div>
+                        <p class="skill-name">JavaScript</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill">
+                        <div class="skill-image" style="background: #3776AB; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">Py</div>
+                        <p class="skill-name">Python</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill">
+                        <div class="skill-image" style="background: #777BB4; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">PHP</div>
+                        <p class="skill-name">PHP</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill">
+                        <div class="skill-image" style="background: #4479A1; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">SQL</div>
+                        <p class="skill-name">SQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What I use?</span></h6>
+            <h2 class="section-heading text-center">Tools & Frameworks</h2>
+            <p class="text-center muted-text mt-3 mb-4">Tech stack known? Here are tools and frameworks that I use:</p>
+            <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-6 mt-4 gy-4 tools-container">
+                <div class="col">
+                    <div class="tool">
+                        <div class="tool-image" style="background: #6f42c1; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">ST</div>
+                        <p class="tool-name">Streamlit</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tool">
+                        <div class="tool-image" style="background: #092E20; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">DJ</div>
+                        <p class="tool-name">Django</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tool">
+                        <div class="tool-image" style="background: #F05032; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">Git</div>
+                        <p class="tool-name">Git</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tool">
+                        <div class="tool-image" style="background: #181717; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">GH</div>
+                        <p class="tool-name">GitHub</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tool">
+                        <div class="tool-image" style="background: #5578C3; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">KL</div>
+                        <p class="tool-name">Kali Linux</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tool">
+                        <div class="tool-image" style="background: #1679C0; color: white; border-radius: 8px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem;">WS</div>
+                        <p class="tool-name">Wireshark</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Where I've worked?</span></h6>
+            <h2 class="section-heading text-center">Experience</h2>
+            <div class="row justify-content-center mt-4 gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <div style="width: 40px; height: 40px; background: #0d6efd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">ZS</div>
+                                </div>
+                                <div class="col-7 p-0">
+                                    <a href="#" class="card-title title">Zero Trust Cloud Security</a>
+                                    <p class="stacks m-0">Zscaler | Jul 2024 – Sep 2024</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Completed a 10-week virtual internship focusing on zero trust architecture and cloud security. Learned secure access practices, cloud threat mitigation, and Zscaler security solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <div style="width: 40px; height: 40px; background: #fd7e14; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">PA</div>
+                                </div>
+                                <div class="col-7 p-0">
+                                    <a href="#" class="card-title title">Cybersecurity Virtual Intern</a>
+                                    <p class="stacks m-0">Palo Alto Networks | Jan 2025 – Mar 2025</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Completed a 10-week virtual internship focused on cybersecurity fundamentals and practical applications. Gained exposure to network security, threat analysis, and Palo Alto Networks security tools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <div style="width: 40px; height: 40px; background: #198754; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">EH</div>
+                                </div>
+                                <div class="col-7 p-0">
+                                    <a href="#" class="card-title title">Ethical Hacking Virtual Intern</a>
+                                    <p class="stacks m-0">EduSkills | Oct 2024 – Dec 2024</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Completed a 10-week virtual internship focusing on ethical hacking tools and techniques. Learned vulnerability assessment, penetration testing basics, and security best practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What I've done?</span></h6>
+            <h2 class="section-heading text-center">Projects</h2>
+            <div class="row justify-content-center mt-4 gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <div style="width: 40px; height: 40px; background: #FF4B4B; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">WC</div>
+                                </div>
+                                <div class="col-7 p-0">
+                                    <a href="#" class="card-title title">Website Change Tracker</a>
+                                    <p class="stacks m-0">Streamlit | Python</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <a href="#" class="btn btn-sm primary-bg-btn rounded-5">View <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Final Year Project: Built using Streamlit and Python to track website content changes. Contributed to UI development using Streamlit.</p>
+                        </div>
+                        <div class="banner-container">
+                            <div class="overlay">
+                                <a href="#" class="btn text-white"><i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                            </div>
+                            <div style="height: 180px; background: linear-gradient(135deg, #FF4B4B, #FF9064); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">Website Change Tracker</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <div style="width: 40px; height: 40px; background: #4CAF50; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">IF</div>
+                                </div>
+                                <div class="col-7 p-0">
+                                    <a href="#" class="card-title title">Internship Finder Platform</a>
+                                    <p class="stacks m-0">HTML | CSS | JS | Streamlit</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <a href="#" class="btn btn-sm primary-bg-btn rounded-5">View <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Students5GClub: Full-stack development of a student-focused internship portal. UI built with HTML/CSS/JS, backend with Streamlit and Python.</p>
+                        </div>
+                        <div class="banner-container">
+                            <div class="overlay">
+                                <a href="#" class="btn text-white"><i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                            </div>
+                            <div style="height: 180px; background: linear-gradient(135deg, #4CAF50, #8BC34A); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">Internship Finder</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <div style="width: 40px; height: 40px; background: #2196F3; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">PS</div>
+                                </div>
+                                <div class="col-7 p-0">
+                                    <a href="#" class="card-title title">Simple Port Scanner</a>
+                                    <p class="stacks m-0">Python</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <a href="#" class="btn btn-sm primary-bg-btn rounded-5">View <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Developed a Python tool to scan IP addresses and detect open ports in real-time. Used for quick network security assessments.</p>
+                        </div>
+                        <div class="banner-container">
+                            <div class="overlay">
+                                <a href="#" class="btn text-white"><i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                            </div>
+                            <div style="height: 180px; background: linear-gradient(135deg, #2196F3, #03A9F4); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">Port Scanner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What's next!</span></h6>
+            <h2 class="section-heading text-center">Get In Touch</h2>
+            <p class="text-center muted-text mt-3 mb-4">Interested in working together? I'm always open to discussing new opportunities and ideas.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" name="subject"  placeholder="Subject *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea style="resize: none;" class="form-control" id="message" name="message" rows="5" placeholder="Your message *" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn primary-bg-btn mt-2">Send Message <i class="bi bi-arrow-up-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="contact-info">
+                        <i class="bi bi-envelope-fill h3 text-primary"></i>
+                        <h5 class="mt-2">Email</h5>
+                        <p class="muted-text">pchowdary205@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="contact-info">
+                        <i class="bi bi-telephone-fill h3 text-primary"></i>
+                        <h5 class="mt-2">Phone</h5>
+                        <p class="muted-text">+91 8309957874</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="contact-info">
+                        <i class="bi bi-geo-alt-fill h3 text-primary"></i>
+                        <h5 class="mt-2">Location</h5>
+                        <p class="muted-text">Rajahmundry, Andhra Pradesh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <p class="text-center copyright-text">Made with <span>HTML, CSS, JavaScript</span> and a dash of <span class="heart-icon"><i class="bi bi-hearts"></i></span> by <span>Prasad Chowdary</span>.</p>
+        </div>
+    </footer>
+
+    <button class="btn" id="backToTopButton" style="display: none;">
+        <span aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+            </svg>
+        </span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
+        });
+
+        // Theme switcher
+        const switchTheme = document.getElementById('switchTheme');
+        const body = document.body;
+        
+        // Check for saved theme or prefer-color-scheme
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-bs-theme', currentTheme);
+        
+        switchTheme.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            const icon = switchTheme.querySelector('i');
+            icon.className = newTheme === 'dark' ? 'bi bi-brightness-high-fill' : 'bi bi-moon-fill';
+        });
+
+        // Update icon based on current theme
+        const icon = switchTheme.querySelector('i');
+        if (body.getAttribute('data-bs-theme') === 'light') {
+            icon.className = 'bi bi-moon-fill';
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTopButton');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
