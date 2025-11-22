@@ -3,41 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
     <title>Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast</title>
-
-    <meta name="title" content="Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast">
-    <meta name="description" content="Prasad Chowdary - Passionate Frontend Developer and Cybersecurity Enthusiast creating secure and responsive web applications. Explore my portfolio and projects.">
-    <meta name="keywords" content="Prasad Chowdary, Web Developer, Frontend Developer, Cybersecurity, Portfolio, Projects">
-    <meta name="author" content="Prasad Chowdary">
-
-    <!-- Open Graph Meta Tags / Facebook -->
-    <meta property="og:title" content="Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast">
-    <meta property="og:description" content="Passionate about creating secure and responsive web applications. Explore my portfolio and projects.">
-    <meta property="og:image" content="assets/images/banner.webp">
-    <meta property="og:url" content="/">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prasad Chowdary - Frontend Developer & Cybersecurity Enthusiast">
-    <meta name="twitter:description" content="Passionate about creating secure and responsive web applications. Explore my portfolio and projects.">
-    <meta name="twitter:image" content="assets/images/banner.webp">
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" type="image/svg+xml">
-
-    <!-- Google Fonts: Rubik -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <style>
         :root {
             --primary-color: #0d6efd;
@@ -535,6 +504,30 @@
                 padding: 3rem 0;
             }
         }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1rem;
+            width: 100%;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+        
+        .whatsapp-icon {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 
@@ -970,6 +963,12 @@
                                 </div>
                             </div>
                         </form>
+                        
+                        <!-- WhatsApp Button -->
+                        <button id="whatsappBtn" class="whatsapp-btn" style="display: none;">
+                            <i class="bi bi-whatsapp whatsapp-icon"></i>
+                            Send via WhatsApp
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1074,11 +1073,36 @@
             });
         });
 
-        // Form submission
+        // WhatsApp Integration
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hello Prasad!%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}%0A%0AI found you through your portfolio website and would like to connect with you.`;
+            
+            // Your WhatsApp number (replace with your actual number)
+            const phoneNumber = "918309957874"; // Remove the + sign
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+            
+            // Show WhatsApp button
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            whatsappBtn.style.display = 'block';
+            
+            // Set WhatsApp button href
+            whatsappBtn.onclick = function() {
+                window.open(whatsappURL, '_blank');
+            };
+            
+            // Show success message
+            alert('Form submitted successfully! Click the "Send via WhatsApp" button to send your message directly to my WhatsApp.');
         });
 
         // Smooth scrolling for navigation links
